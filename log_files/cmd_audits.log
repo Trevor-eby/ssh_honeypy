@@ -1,0 +1,4 @@
+Client 127.0.0.1 attempted connection with username: username, password: 
+Client 127.0.0.1 attempted connection with username: username, password: password
+Command b'ls'executed by 127.0.0.1
+Command b'pwd'executed by 127.0.0.1
