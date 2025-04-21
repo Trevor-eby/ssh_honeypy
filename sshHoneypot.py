@@ -41,7 +41,7 @@ creds_handler.setFormatter(logging_format)
 creds_logger.addHandler(creds_handler)
 
 def emulated_shell(channel, client_ip):
-    channel.send(b"corporate-jumpbox2$ ")
+    channel.send(b"user$ ")
     command = b""
     while True:  
         char = channel.recv(1)
@@ -72,7 +72,7 @@ def emulated_shell(channel, client_ip):
                 response = b"\n" + bytes(command.strip()) + b"\r\n"
             
             channel.send(response)
-            channel.send(b"corporate-jumpbox2$ ")
+            channel.send(b"user$ ")
             command = b"\r"
 
 class Server(paramiko.ServerInterface):
