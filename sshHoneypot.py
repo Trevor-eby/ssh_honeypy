@@ -68,6 +68,8 @@ def emulated_shell(channel, client_ip):
                 response = b"\n" + b"passwords.txt IMPORTANT.txt " + b"\r\n"
             elif command.strip() == b'cat passwords.txt':
                 response = b"\n" + b"trevor 12345\n\rivan 678910" + b"\r\n"
+            elif command.strip() == b'cat IMPORTANT.txt':
+                response = b"\n" + b"THIS IS IMPORTANT INFORMATION!!!\n\r" + b"\r\n"
             else:
                 response = b"\n" + bytes(command.strip()) + b"\r\n"
             
